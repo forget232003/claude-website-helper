@@ -1,4 +1,5 @@
 import lectureSoldiersImg from "@/assets/lecture-soldiers.jpg";
+import bloodDonationImg from "@/assets/blood-donation.jpg";
 
 interface LectureItem {
   icon: string;
