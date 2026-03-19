@@ -1,7 +1,11 @@
+import tankFiring from "@/assets/tank-firing.jpeg";
+import tuvalGdud from "@/assets/tuval-gdud53.jpeg";
+import tuvalSamar from "@/assets/tuval-samar.jpeg";
+
 const militaryCards = [
-  { icon: "🛡️", title: "עוצבת ברק (188)", desc: "אחת העוצבות המובילות של חיל השריון, בעלת מורשת קרבית מפוארת" },
-  { icon: "🎯", title: "גדוד 53", desc: "גדוד הטנקים שבו שירת תובל כתותחן מצטיין ולוחם מסור" },
-  { icon: "🏅", title: 'סמ"ר לאחר נפילתו', desc: "הועלה בדרגה כהוקרה על גבורתו ומסירותו בקרב" },
+  { icon: "🛡️", title: "עוצבת ברק (188)", desc: "אחת העוצבות המובילות של חיל השריון, בעלת מורשת קרבית מפוארת", image: tankFiring },
+  { icon: "🎯", title: "גדוד 53", desc: "גדוד הטנקים שבו שירת תובל כתותחן מצטיין ולוחם מסור", image: tuvalGdud },
+  { icon: "🏅", title: 'סמ"ר לאחר נפילתו', desc: "הועלה בדרגה כהוקרה על גבורתו ומסירותו בקרב", image: tuvalSamar },
 ];
 
 const MilitarySection = () => {
@@ -14,10 +18,13 @@ const MilitarySection = () => {
 
         <div className="flex flex-col gap-5 mb-12">
           {militaryCards.map((card) => (
-            <div key={card.title} className="bg-card rounded-xl p-6 text-center border border-border">
-              <div className="text-4xl mb-2.5">{card.icon}</div>
-              <h3 className="text-base font-bold text-primary-foreground mb-1.5">{card.title}</h3>
-              <p className="text-sm text-muted-foreground !mb-0">{card.desc}</p>
+            <div key={card.title} className="bg-card rounded-xl overflow-hidden border border-border">
+              <img src={card.image} alt={card.title} className="w-full h-48 object-cover" />
+              <div className="p-6 text-center">
+                <div className="text-4xl mb-2.5">{card.icon}</div>
+                <h3 className="text-base font-bold text-primary-foreground mb-1.5">{card.title}</h3>
+                <p className="text-sm text-muted-foreground !mb-0">{card.desc}</p>
+              </div>
             </div>
           ))}
         </div>
