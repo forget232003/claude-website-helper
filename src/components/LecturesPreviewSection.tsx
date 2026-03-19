@@ -38,7 +38,7 @@ const LecturesPreviewSection = () => {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-56 object-cover object-top rounded-xl mt-3 border border-border"
+                  className="w-full h-72 object-cover object-center rounded-xl mt-3 border border-border"
                 />
               )}
             </div>
