@@ -10,7 +10,7 @@ interface LectureItem {
 
 const lectures: LectureItem[] = [
   { icon: "👥", title: "הרצאות אל מול אלפי חיילים", desc: "מול 300 חיילים לפני כניסה לעזה", image: lectureSoldiersImg },
-  { icon: "📚", title: "למעלה מ 1400 תרומות דם לזכרו של תובל שהצילו את חייהם של אלפי חיילים", desc: "" },
+  { icon: "📚", title: "למעלה מ 1400 תרומות דם לזכרו של תובל שהצילו את חייהם של אלפי חיילים", desc: "", image: bloodDonationImg },
   { icon: "❤️", title: "מפגש עם משפחות", desc: "שיח פתוח על אובדן ותקווה" },
 ];
 
