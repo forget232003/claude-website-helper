@@ -1,14 +1,12 @@
 const Footer = () => {
   return (
-    <footer className="py-8 border-t border-border bg-card">
-      <div className="max-w-5xl mx-auto px-6 text-center">
-        <p className="text-muted-foreground text-sm">
-          לזכרו של סמ"ר תובל יעקב צנעני ז"ל • 20.11.2003 – 04.12.2023
-        </p>
-        <p className="text-muted-foreground/60 text-xs mt-2">
-          "בסוף הכל יהיה בסדר"
-        </p>
-      </div>
+    <footer className="bg-bg3 py-12 px-6 text-center border-t border-border">
+      <span className="text-3xl block mb-4 text-gold">★</span>
+      <h3 className="text-xl font-extrabold text-primary-foreground mb-2.5">
+        לזכרו של סמ"ר תובל יעקב צנעני ז"ל
+      </h3>
+      <p className="text-sm text-muted-foreground mb-1">בן 20 בנופלו • כ"א בכסלו התשפ"ד</p>
+      <p className="text-sm text-muted-foreground">ולזכר חבריו איתן פיש וויקיר ידידיה שינקולבסקי ז"ל</p>
     </footer>
   );
 };
