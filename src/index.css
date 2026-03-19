@@ -6,41 +6,40 @@
 
 @layer base {
   :root {
-    --background: 30 20% 98%;
-    --foreground: 220 30% 15%;
+    --background: 240 25% 13%;
+    --foreground: 240 10% 92%;
 
-    --card: 30 15% 96%;
-    --card-foreground: 220 30% 15%;
+    --bg2: 240 30% 10%;
+    --bg3: 240 35% 7%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 15%;
+    --card: 240 22% 17%;
+    --card-foreground: 240 10% 92%;
 
-    --primary: 220 40% 20%;
-    --primary-foreground: 40 30% 95%;
+    --popover: 240 22% 17%;
+    --popover-foreground: 240 10% 92%;
 
-    --secondary: 35 30% 92%;
-    --secondary-foreground: 220 30% 15%;
+    --primary: 233 100% 71%;
+    --primary-foreground: 0 0% 100%;
 
-    --muted: 30 15% 93%;
-    --muted-foreground: 220 10% 45%;
+    --secondary: 233 80% 61%;
+    --secondary-foreground: 0 0% 100%;
 
-    --accent: 38 70% 55%;
-    --accent-foreground: 220 40% 12%;
+    --muted: 240 15% 40%;
+    --muted-foreground: 240 15% 67%;
+
+    --accent: 40 60% 55%;
+    --accent-foreground: 240 25% 13%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 30 15% 88%;
-    --input: 30 15% 88%;
-    --ring: 38 70% 55%;
+    --border: 240 18% 26%;
+    --input: 240 18% 26%;
+    --ring: 233 100% 71%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --hero-gradient: linear-gradient(135deg, hsl(220 40% 15%) 0%, hsl(220 35% 25%) 50%, hsl(200 30% 20%) 100%);
-    --gold-glow: 0 4px 20px -4px hsl(38 70% 55% / 0.3);
-    --card-shadow: 0 2px 12px -2px hsl(220 30% 15% / 0.08);
-
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 240 25% 13%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
     --sidebar-primary-foreground: 0 0% 98%;
@@ -56,22 +55,24 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground font-body;
+    @apply bg-background text-foreground;
+    font-family: 'Heebo', sans-serif;
     direction: rtl;
+    line-height: 1.7;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Heebo', sans-serif;
-    font-weight: 700;
   }
 }
 
 @layer utilities {
-  .text-gold-gradient {
-    background: linear-gradient(135deg, hsl(38 70% 55%), hsl(42 80% 65%));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .text-gold {
+    color: hsl(var(--accent));
   }
 }
