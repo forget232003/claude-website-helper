@@ -5,13 +5,12 @@ const HeroSection = () => {
   return (
     <section
       id="top"
-      className="min-h-screen flex flex-col items-center justify-center text-center px-6 py-16 relative overflow-hidden"
-      style={{ background: "radial-gradient(ellipse at 50% 30%, #1e1e40 0%, hsl(240 35% 7%) 70%)" }}
+      className="min-h-screen flex flex-col items-center justify-center text-center px-6 py-16 relative overflow-hidden bg-background"
     >
       {/* Background image of Tuval */}
       <div className="absolute inset-0">
-        <img src={tuvalHero} alt="תובל" className="w-full h-full object-cover opacity-15" />
-        <div className="absolute inset-0 bg-gradient-to-b from-bg3/80 via-background/70 to-bg3/90" />
+        <img src={tuvalHero} alt="תובל" className="w-full h-full object-cover opacity-40" />
+        <div className="absolute inset-0 bg-background/60" />
       </div>
 
       {/* Pattern overlay */}
