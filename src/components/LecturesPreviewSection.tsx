@@ -1,5 +1,7 @@
 import lectureSoldiersImg from "@/assets/lecture-soldiers.jpg";
 import bloodDonationImg from "@/assets/blood-donation.jpg";
+import speechEventImg from "@/assets/speech-event.jpeg";
+import mediaInterviewImg from "@/assets/media-interview.jpeg";
 
 interface LectureItem {
   icon: string;
@@ -11,7 +13,8 @@ interface LectureItem {
 const lectures: LectureItem[] = [
   { icon: "👥", title: "הרצאות אל מול אלפי חיילים", desc: "", image: lectureSoldiersImg },
   { icon: "📚", title: "למעלה מ 1400 תרומות דם לזכרו של תובל שהצילו את חייהם של אלפי חיילים", desc: "", image: bloodDonationImg },
-  { icon: "❤️", title: "מפגש עם משפחות", desc: "שיח פתוח על אובדן ותקווה" },
+  { icon: "🎤", title: "הרצאות אל מול נבחרי ציבור וכלי תקשורת", desc: "", image: speechEventImg },
+  { icon: "📺", title: "", desc: "", image: mediaInterviewImg },
 ];
 
 const LecturesPreviewSection = () => {
