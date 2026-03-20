@@ -2,6 +2,7 @@ const stats = [
   { num: "+1000", label: "חיילים השתתפו", desc: "" },
   { num: "+57", label: "הרצאות הועברו", desc: "ברחבי הארץ" },
   { num: "100%", label: "המלצות חמות", desc: "" },
+  { num: "∞", label: "זיכרון", desc: "" },
 ];
 
 const StatsSection = () => {
