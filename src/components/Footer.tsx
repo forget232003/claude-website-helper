@@ -6,7 +6,7 @@ const Footer = () => {
         לזכרו של סמ"ר תובל יעקב צנעני ז"ל
       </h3>
       <p className="text-sm text-muted-foreground mb-1">בן 20 בנופלו • כ"א בכסלו התשפ"ד</p>
-      <p className="text-sm text-muted-foreground">ולזכר חבריו איתן פיש וויקיר ידידיה שינקולבסקי ז"ל</p>
+      <p className="text-sm text-muted-foreground">ולזכר חבריו איתן פיש ויקיר ידידיה שינקולבסקי ז"ל</p>
     </footer>
   );
 };
