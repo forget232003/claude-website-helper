@@ -7,6 +7,12 @@ const Footer = () => {
       </h3>
       <p className="text-sm text-muted-foreground mb-1">בן 20 בנופלו • כ"א בכסלו התשפ"ד</p>
       <p className="text-sm text-muted-foreground">ולזכר חבריו איתן פיש ויקיר ידידיה שינקולבסקי ז"ל</p>
+      <div className="mt-6 pt-6 border-t border-border">
+        <p className="text-sm text-muted-foreground mb-1">ליצירת קשר:</p>
+        <a href="mailto:ravidtzanani6@gmail.com" className="text-sm text-primary hover:underline">
+          ravidtzanani6@gmail.com
+        </a>
+      </div>
     </footer>
   );
 };
