@@ -21,7 +21,7 @@ const HeroSection = () => {
       }} />
 
       <div className="relative z-10">
-        <div className="flex items-center justify-end gap-4 mb-8 pr-4">
+        <div className="flex flex-col items-end gap-3 mb-8 pr-4">
           <div className="w-28 h-28 rounded-full border-2 border-border bg-card/80 flex items-center justify-center overflow-hidden">
             <img src={hativa188} alt="סמל חטיבה 188" className="w-20 h-20 object-contain" />
           </div>
