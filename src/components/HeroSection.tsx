@@ -21,8 +21,18 @@ const HeroSection = () => {
       }} />
 
       <div className="relative z-10">
-        <div className="w-28 h-28 rounded-full border-2 border-border bg-card/80 flex items-center justify-center mx-auto mb-8 overflow-hidden">
-          <img src={hativa188} alt="סמל חטיבה 188" className="w-20 h-20 object-contain" />
+        <div className="flex items-center justify-center gap-4 mb-8">
+          <div className="w-28 h-28 rounded-full border-2 border-border bg-card/80 flex items-center justify-center overflow-hidden">
+            <img src={hativa188} alt="סמל חטיבה 188" className="w-20 h-20 object-contain" />
+          </div>
+        </div>
+        <div className="flex items-center justify-center gap-4 mb-6">
+          <div className="w-16 h-16 rounded-full border-2 border-border bg-card/80 flex items-center justify-center overflow-hidden">
+            <img src={plugatGolan} alt="פלוגת גולן" className="w-12 h-12 object-contain" />
+          </div>
+          <div className="w-16 h-16 rounded-full border-2 border-border bg-card/80 flex items-center justify-center overflow-hidden">
+            <img src={sufaBadge} alt="סמל סופה" className="w-12 h-12 object-contain" />
+          </div>
         </div>
 
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-primary-foreground leading-tight mb-5">
