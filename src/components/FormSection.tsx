@@ -38,7 +38,14 @@ const FormSection = () => {
     <section id="form" className="py-[70px] px-6 bg-bg2">
       <div className="max-w-[700px] mx-auto">
         <h2 className="text-2xl font-black text-primary-foreground text-center mb-2">הזמן הרצאה</h2>
-        <p className="text-center text-muted-foreground mb-7">מלאו את הפרטים ונחזור אליכם בהקדם האפשרי</p>
+        {submitted ? (
+          <div className="text-center py-12">
+            <span className="text-4xl block mb-4">✅</span>
+            <h3 className="text-xl font-bold text-primary-foreground mb-2">הפנייה נשלחה בהצלחה!</h3>
+            <p className="text-muted-foreground">נחזור אליכם בהקדם האפשרי</p>
+          </div>
+        ) : (
+          <>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
