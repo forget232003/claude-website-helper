@@ -9,11 +9,29 @@ const FormSection = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Build WhatsApp message
-    const text = `שלום, אני ${formData.name} מ${formData.organization || "—"}. אשמח להזמין הרצאה.\nטלפון: ${formData.phone}\nאימייל: ${formData.email}\n${formData.message}`;
-    window.open(`https://wa.me/972503112243?text=${encodeURIComponent(text)}`, "_blank");
+    try {
+      await fetch("https://formsubmit.co/ajax/ravidtzanani6@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          organization: formData.organization,
+          message: formData.message,
+          _subject: `פנייה חדשה מ${formData.name} – הזמנת הרצאה`,
+        }),
+      });
+      setSubmitted(true);
+    } catch {
+      // fallback to WhatsApp
+      const text = `שלום, אני ${formData.name} מ${formData.organization || "—"}. אשמח להזמין הרצאה.\nטלפון: ${formData.phone}\nאימייל: ${formData.email}\n${formData.message}`;
+      window.open(`https://wa.me/972503112243?text=${encodeURIComponent(text)}`, "_blank");
+    }
   };
 
   return (
