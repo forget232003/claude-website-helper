@@ -45,7 +45,7 @@ const FormSection = () => {
             <p className="text-muted-foreground">נחזור אליכם בהקדם האפשרי</p>
           </div>
         ) : (
-          <>
+          <p className="text-center text-muted-foreground mb-7">מלאו את הפרטים ונחזור אליכם בהקדם האפשרי</p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
