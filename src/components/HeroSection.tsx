@@ -1,4 +1,6 @@
 import hativa188 from "@/assets/hativa188.png";
+import plugatGolan from "@/assets/plugat-golan.png";
+import sufaBadge from "@/assets/sufa-badge.png";
 import tuvalHero from "@/assets/tuval-hero.png";
 
 const HeroSection = () => {
