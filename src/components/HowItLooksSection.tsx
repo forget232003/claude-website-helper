@@ -11,7 +11,7 @@ const HowItLooksSection = () => {
     <section className="py-[70px] px-6 relative overflow-hidden">
       {/* Background image with dark overlay */}
       <div className="absolute inset-0">
-        <img src={knessetBg} alt="" className="w-full h-full object-cover" />
+        <img src={knessetBg} alt="" className="w-full h-full object-cover object-top" />
         <div className="absolute inset-0 bg-background/85" />
       </div>
 
