@@ -1,27 +1,27 @@
 import tankFiring from "@/assets/tank-firing.jpeg";
 import tuvalGdud from "@/assets/tuval-gdud53.jpeg";
 import tuvalSamar from "@/assets/tuval-samar.jpeg";
+import { useLanguage } from "@/i18n/LanguageContext";
 
-const militaryCards = [
-  { icon: "🛡️", title: "עוצבת ברק (188)", desc: "אחת העוצבות המובילות של חיל השריון, בעלת מורשת קרבית מפוארת", image: tankFiring },
-  { icon: "🎯", title: "גדוד 53", desc: "גדוד הטנקים שבו שירת תובל כתותחן מצטיין ולוחם מסור", image: tuvalGdud },
-  { icon: "🏅", title: 'סמ"ר לאחר נפילתו', desc: "הועלה בדרגה כהוקרה על גבורתו ומסירותו בקרב", image: tuvalSamar },
-];
+const icons = ["🛡️", "🎯", "🏅"];
 
 const MilitarySection = () => {
+  const { t } = useLanguage();
+  const images = [tankFiring, tuvalGdud, tuvalSamar];
+
   return (
     <section className="py-[70px] px-6 bg-bg2">
       <div className="max-w-[700px] mx-auto">
         <h2 className="text-3xl md:text-4xl font-black text-primary-foreground text-center mb-8">
-          השירות הצבאי – גאווה ומסירות
+          {t.militaryTitle}
         </h2>
 
         <div className="flex flex-col gap-5 mb-12">
-          {militaryCards.map((card) => (
+          {t.militaryCards.map((card: any, i: number) => (
             <div key={card.title} className="bg-card rounded-xl overflow-hidden border border-border">
-              <img src={card.image} alt={card.title} className="w-full h-48 object-cover" />
+              <img src={images[i]} alt={card.title} className="w-full h-48 object-cover" />
               <div className="p-6 text-center">
-                <div className="text-4xl mb-2.5">{card.icon}</div>
+                <div className="text-4xl mb-2.5">{icons[i]}</div>
                 <h3 className="text-base font-bold text-primary-foreground mb-1.5">{card.title}</h3>
                 <p className="text-sm text-muted-foreground !mb-0">{card.desc}</p>
               </div>
@@ -30,17 +30,11 @@ const MilitarySection = () => {
         </div>
 
         <h3 className="text-2xl font-black text-primary-foreground text-center mb-5">
-          הקרב האחרון – גבורה בחרבות ברזל
+          {t.battleTitle}
         </h3>
-        <p className="text-muted-foreground text-[0.97rem] mb-3.5 leading-[1.85]">
-          ביום כ"א בכסלו התשפ"ד (4 בדצמבר 2023), במסגרת מלחמת חרבות ברזל, יצא תובל עם צוות הטנק שלו למשימה קרבית ברצועת עזה. הם ידעו שהמשימה מסוכנת, אך הם נחושים להגן על מדינת ישראל.
-        </p>
-        <p className="text-muted-foreground text-[0.97rem] mb-3.5 leading-[1.85]">
-          בקרב הקשה נפגע הטנק של תובל. יחד איתו נפלו שני חבריו הטובים – איתן פיש ויקיר ידידיה שינקולבסקי ז"ל. שלושה צעירים מלאי חיים, חלומות ותקוות, שנתנו את חייהם למען המולדת.
-        </p>
-        <p className="text-foreground font-bold text-base">
-          תובל היה בן 20 בנופלו. צעיר שחי חיים מלאים באהבה, שמחה ומשמעות, והותיר אחריו מורשת של גבורה ותקווה שתמשיך לחיות לעד.
-        </p>
+        <p className="text-muted-foreground text-[0.97rem] mb-3.5 leading-[1.85]">{t.battleP1}</p>
+        <p className="text-muted-foreground text-[0.97rem] mb-3.5 leading-[1.85]">{t.battleP2}</p>
+        <p className="text-foreground font-bold text-base">{t.battleP3}</p>
       </div>
     </section>
   );

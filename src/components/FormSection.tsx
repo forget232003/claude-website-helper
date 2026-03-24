@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const FormSection = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -28,7 +30,6 @@ const FormSection = () => {
       });
       setSubmitted(true);
     } catch {
-      // fallback to WhatsApp
       const text = `שלום, אני ${formData.name} מ${formData.organization || "—"}. אשמח להזמין הרצאה.\nטלפון: ${formData.phone}\nאימייל: ${formData.email}\n${formData.message}`;
       window.open(`https://wa.me/972503112243?text=${encodeURIComponent(text)}`, "_blank");
     }
@@ -37,26 +38,26 @@ const FormSection = () => {
   return (
     <section id="form" className="py-[70px] px-6 bg-bg2">
       <div className="max-w-[700px] mx-auto">
-        <h2 className="text-2xl font-black text-primary-foreground text-center mb-2">הזמן הרצאה</h2>
+        <h2 className="text-2xl font-black text-primary-foreground text-center mb-2">{t.formTitle}</h2>
         {submitted ? (
           <div className="text-center py-12">
             <span className="text-4xl block mb-4">✅</span>
-            <h3 className="text-xl font-bold text-primary-foreground mb-2">הפנייה נשלחה בהצלחה!</h3>
-            <p className="text-muted-foreground">נחזור אליכם בהקדם האפשרי</p>
+            <h3 className="text-xl font-bold text-primary-foreground mb-2">{t.formSuccess}</h3>
+            <p className="text-muted-foreground">{t.formSuccessDesc}</p>
           </div>
         ) : (
           <>
-            <p className="text-center text-muted-foreground mb-7">מלאו את הפרטים ונחזור אליכם בהקדם האפשרי</p>
+            <p className="text-center text-muted-foreground mb-7">{t.formSubtitle}</p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="block text-sm font-semibold text-foreground mb-1.5">
-                  שם מלא <span className="text-destructive">*</span>
+                  {t.formName} <span className="text-destructive">{t.required}</span>
                 </label>
                 <input
                   type="text"
                   required
-                  placeholder="השם שלכם"
+                  placeholder={t.formNamePh}
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full bg-card border border-border rounded-lg px-3.5 py-3 text-foreground text-[0.95rem] outline-none transition-colors duration-200 focus:border-primary placeholder:text-muted-foreground"
@@ -64,41 +65,41 @@ const FormSection = () => {
               </div>
               <div>
                 <label className="block text-sm font-semibold text-foreground mb-1.5">
-                  טלפון <span className="text-destructive">*</span>
+                  {t.formPhone} <span className="text-destructive">{t.required}</span>
                 </label>
                 <input
                   type="tel"
                   required
-                  placeholder="050-000-0000"
+                  placeholder={t.formPhonePh}
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full bg-card border border-border rounded-lg px-3.5 py-3 text-foreground text-[0.95rem] outline-none transition-colors duration-200 focus:border-primary placeholder:text-muted-foreground"
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-foreground mb-1.5">אימייל</label>
+                <label className="block text-sm font-semibold text-foreground mb-1.5">{t.formEmail}</label>
                 <input
                   type="email"
-                  placeholder="name@email.com"
+                  placeholder={t.formEmailPh}
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full bg-card border border-border rounded-lg px-3.5 py-3 text-foreground text-[0.95rem] outline-none transition-colors duration-200 focus:border-primary placeholder:text-muted-foreground"
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-foreground mb-1.5">שם הארגון/מוסד</label>
+                <label className="block text-sm font-semibold text-foreground mb-1.5">{t.formOrg}</label>
                 <input
                   type="text"
-                  placeholder="שם הארגון"
+                  placeholder={t.formOrgPh}
                   value={formData.organization}
                   onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
                   className="w-full bg-card border border-border rounded-lg px-3.5 py-3 text-foreground text-[0.95rem] outline-none transition-colors duration-200 focus:border-primary placeholder:text-muted-foreground"
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-foreground mb-1.5">הודעה</label>
+                <label className="block text-sm font-semibold text-foreground mb-1.5">{t.formMessage}</label>
                 <textarea
-                  placeholder="ספרו לנו על האירוע שלכם..."
+                  placeholder={t.formMsgPh}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full bg-card border border-border rounded-lg px-3.5 py-3 text-foreground text-[0.95rem] outline-none transition-colors duration-200 focus:border-primary placeholder:text-muted-foreground h-28 resize-y"
@@ -108,12 +109,12 @@ const FormSection = () => {
                 type="submit"
                 className="w-full bg-secondary text-secondary-foreground py-4 rounded-lg text-base font-bold transition-colors duration-200 hover:bg-primary mt-1"
               >
-                שלח פנייה להזמנת הרצאה
+                {t.formSubmit}
               </button>
             </form>
 
             <div className="mt-7 text-center">
-              <p className="text-sm text-muted-foreground mb-3">צרו קשר ישירות:</p>
+              <p className="text-sm text-muted-foreground mb-3">{t.formDirect}</p>
               <div className="flex gap-3 justify-center flex-wrap">
                 <a
                   href="https://wa.me/972503112243"
