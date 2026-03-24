@@ -7,12 +7,15 @@ import WhatYouGetSection from "@/components/WhatYouGetSection";
 import HowItLooksSection from "@/components/HowItLooksSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import WhySection from "@/components/WhySection";
+import WineSection from "@/components/WineSection";
 import FormSection from "@/components/FormSection";
 import Footer from "@/components/Footer";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <LanguageSwitcher />
       <HeroSection />
       <StorySection />
       <MilitarySection />
@@ -22,6 +25,7 @@ const Index = () => {
       <HowItLooksSection />
       <TestimonialsSection />
       <WhySection />
+      <WineSection />
       <FormSection />
       <Footer />
     </div>
