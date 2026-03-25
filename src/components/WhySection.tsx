@@ -1,12 +1,18 @@
 import { useLanguage } from "@/i18n/LanguageContext";
+import soldierLandscape from "@/assets/soldier-landscape.jpg";
 
 const WhySection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-[70px] px-6 bg-background">
-      <div className="max-w-[700px] mx-auto">
-        <h2 className="text-3xl md:text-4xl font-black text-primary-foreground text-center mb-8">
+    <section className="relative py-[70px] px-6 overflow-hidden">
+      <div className="absolute inset-0">
+        <img src={soldierLandscape} alt="חייל משקיף על הנוף" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-black/75" />
+      </div>
+
+      <div className="relative z-10 max-w-[700px] mx-auto">
+        <h2 className="text-3xl md:text-4xl font-black text-white text-center mb-8">
           {t.whyTitle}
         </h2>
 
@@ -14,7 +20,7 @@ const WhySection = () => {
           {t.whyReasons.map((reason: string, i: number) => (
             <div
               key={i}
-              className="bg-card rounded-[10px] p-4 border-r-[3px] border-secondary text-[0.95rem] text-foreground"
+              className="bg-black/40 rounded-[10px] p-4 border-r-[3px] border-secondary text-[0.95rem] text-gray-200"
             >
               {reason}
             </div>
