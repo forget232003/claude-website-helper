@@ -13,8 +13,8 @@ const HeroSection = () => {
       className="min-h-screen flex flex-col items-center justify-center text-center px-6 py-16 relative overflow-hidden bg-background"
     >
       <div className="absolute inset-0">
-        <img src={tuvalHero} alt="תובל" className="w-full h-full object-cover opacity-40" />
-        <div className="absolute inset-0 bg-background/60" />
+        <img src={tuvalHero} alt="תובל" className="w-full h-full object-cover opacity-60" />
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
