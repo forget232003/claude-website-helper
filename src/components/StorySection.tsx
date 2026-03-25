@@ -1,4 +1,5 @@
 import { useLanguage } from "@/i18n/LanguageContext";
+import helmetBird from "@/assets/helmet-bird.jpg";
 
 const StorySection = () => {
   const { t } = useLanguage();
@@ -9,6 +10,10 @@ const StorySection = () => {
         <h2 className="text-3xl md:text-4xl font-black text-primary-foreground text-center mb-8">
           {t.storyTitle}
         </h2>
+
+        <div className="mb-8 rounded-xl overflow-hidden shadow-lg">
+          <img src={helmetBird} alt="ציפור על קסדה בטנק – לזכר תובל" className="w-full h-auto object-cover" />
+        </div>
 
         <h3 className="text-lg font-bold text-primary mb-3.5 text-right">{t.storyH3}</h3>
         <p className="text-muted-foreground text-[0.97rem] mb-3.5 leading-[1.85]">{t.storyP1}</p>
