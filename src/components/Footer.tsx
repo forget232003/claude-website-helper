@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="relative py-12 px-6 text-center overflow-hidden">
       <div className="absolute inset-0">
-        <img src={tankFriends} alt="תובל, איתן ויקיר ז״ל" className="w-full h-full object-cover" />
+        <img src={tankFriends} alt="תובל, איתן ויקיר ז״ל" className="w-full h-full object-cover object-top" />
         <div className="absolute inset-0 bg-black/80" />
       </div>
 
