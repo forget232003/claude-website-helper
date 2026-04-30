@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import formBg from "@/assets/form-bg-tank.jpg";
 
 const FormSection = () => {
   const { t } = useLanguage();
@@ -36,8 +37,12 @@ const FormSection = () => {
   };
 
   return (
-    <section id="form" className="py-[70px] px-6 bg-bg2">
-      <div className="max-w-[700px] mx-auto">
+    <section id="form" className="relative py-[70px] px-6 overflow-hidden">
+      <div className="absolute inset-0">
+        <img src={formBg} alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-black/80" />
+      </div>
+      <div className="relative z-10 max-w-[700px] mx-auto">
         <h2 className="text-2xl font-black text-primary-foreground text-center mb-2">{t.formTitle}</h2>
         {submitted ? (
           <div className="text-center py-12">
