@@ -121,6 +121,8 @@ export const translations = {
     footerAge: "בן 20 בנופלו • כ\"א בכסלו התשפ\"ד",
     footerFriends: "ולזכר חבריו איתן פיש ויקיר ידידיה שינקולבסקי ז\"ל",
     footerContact: "ליצירת קשר:",
+    copyright: "© כל הזכויות שמורות לרביד צנעני. אין להעתיק, לשכפל או להפיץ את התכנים ללא אישור בכתב.",
+    copyrightLink: "זכויות יוצרים",
   },
   en: {
     dir: "ltr" as const,
