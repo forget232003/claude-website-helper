@@ -121,6 +121,8 @@ export const translations = {
     footerAge: "בן 20 בנופלו • כ\"א בכסלו התשפ\"ד",
     footerFriends: "ולזכר חבריו איתן פיש ויקיר ידידיה שינקולבסקי ז\"ל",
     footerContact: "ליצירת קשר:",
+    copyright: "© כל הזכויות שמורות לרביד צנעני. אין להעתיק, לשכפל או להפיץ את התכנים ללא אישור בכתב.",
+    copyrightLink: "זכויות יוצרים",
   },
   en: {
     dir: "ltr" as const,
@@ -230,6 +232,8 @@ export const translations = {
     footerAge: "Aged 20 at his fall • 21 Kislev 5784",
     footerFriends: "And in memory of his friends Eitan Fish and Yakir Yedidia Shinkolvsky z\"l",
     footerContact: "Contact:",
+    copyright: "© All rights reserved to Ravid Tzanani. Content may not be copied, reproduced, or distributed without written permission.",
+    copyrightLink: "Copyright",
   },
 } as const;
 
