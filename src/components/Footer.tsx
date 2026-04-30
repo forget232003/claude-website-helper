@@ -23,6 +23,14 @@ const Footer = () => {
           <a href="mailto:ravidtzanani6@gmail.com" className="text-sm text-secondary hover:underline">
             ravidtzanani6@gmail.com
           </a>
+          <div className="mt-4">
+            <a href="#copyright" className="text-sm text-gold hover:underline font-semibold">
+              {t.copyrightLink}
+            </a>
+            <p id="copyright" className="text-xs text-gray-400 mt-2 max-w-xl mx-auto">
+              {t.copyright}
+            </p>
+          </div>
         </div>
       </div>
     </footer>
