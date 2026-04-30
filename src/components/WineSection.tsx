@@ -3,6 +3,7 @@ import wineRose from "@/assets/wine-rose.png";
 import wineRed from "@/assets/wine-red.png";
 import wineWhite from "@/assets/wine-white.png";
 import wineTrio from "@/assets/wine-trio.png";
+import wineBg from "@/assets/wine-bg-tanks.jpg";
 
 const wines = [
   { image: wineRed, label: "יין אדום", labelEn: "Red Wine", url: "https://wineandfriends.co.il/product/%D7%99%D7%99%D7%9F-%D7%90%D7%93%D7%95%D7%9D-%D7%9C%D7%96%D7%9B%D7%A8-%D7%AA%D7%95%D7%91%D7%9C-%D7%A6%D7%A0%D7%A2%D7%A0%D7%99/" },
@@ -16,12 +17,16 @@ const WineSection = () => {
   const { t, lang } = useLanguage();
 
   return (
-    <section className="py-[70px] px-6 bg-bg3">
-      <div className="max-w-[700px] mx-auto">
-        <h2 className="text-3xl md:text-4xl font-black text-primary-foreground text-center mb-3">
+    <section className="relative py-[70px] px-6 overflow-hidden">
+      <div className="absolute inset-0">
+        <img src={wineBg} alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-black/75" />
+      </div>
+      <div className="relative z-10 max-w-[700px] mx-auto">
+        <h2 className="text-3xl md:text-4xl font-black text-white text-center mb-3">
           {t.wineTitle}
         </h2>
-        <p className="text-center text-muted-foreground mb-10">{t.wineSubtitle}</p>
+        <p className="text-center text-gray-300 mb-10">{t.wineSubtitle}</p>
 
         <div className="grid grid-cols-3 gap-4 mb-6">
           {wines.map((wine) => (
