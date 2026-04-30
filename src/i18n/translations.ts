@@ -232,6 +232,8 @@ export const translations = {
     footerAge: "Aged 20 at his fall • 21 Kislev 5784",
     footerFriends: "And in memory of his friends Eitan Fish and Yakir Yedidia Shinkolvsky z\"l",
     footerContact: "Contact:",
+    copyright: "© All rights reserved to Ravid Tzanani. Content may not be copied, reproduced, or distributed without written permission.",
+    copyrightLink: "Copyright",
   },
 } as const;
 
