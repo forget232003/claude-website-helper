@@ -2,6 +2,7 @@ import lectureSoldiersImg from "@/assets/lecture-soldiers.jpg";
 import bloodDonationImg from "@/assets/blood-donation.jpg";
 import speechEventImg from "@/assets/speech-event.jpeg";
 import mediaInterviewImg from "@/assets/media-interview.jpeg";
+import lecturesBg from "@/assets/lectures-bg-soldiers.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const icons = ["👥", "📚", "🎤", "📺"];
@@ -11,9 +12,13 @@ const LecturesPreviewSection = () => {
   const images = [lectureSoldiersImg, bloodDonationImg, speechEventImg, mediaInterviewImg];
 
   return (
-    <section className="py-[70px] px-6 bg-background">
-      <div className="max-w-[700px] mx-auto">
-        <h2 className="text-3xl md:text-4xl font-black text-primary-foreground text-center mb-8">
+    <section className="relative py-[70px] px-6 overflow-hidden">
+      <div className="absolute inset-0">
+        <img src={lecturesBg} alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-black/75" />
+      </div>
+      <div className="relative z-10 max-w-[700px] mx-auto">
+        <h2 className="text-3xl md:text-4xl font-black text-white text-center mb-8">
           {t.lecturesTitle}
         </h2>
 
@@ -25,7 +30,7 @@ const LecturesPreviewSection = () => {
                   {icons[i]}
                 </div>
                 <div>
-                  <h3 className="text-[0.97rem] font-bold text-primary-foreground mb-1">{title}</h3>
+                  <h3 className="text-[0.97rem] font-bold text-white mb-1">{title}</h3>
                 </div>
               </div>
               <img
@@ -37,7 +42,7 @@ const LecturesPreviewSection = () => {
           ))}
         </div>
 
-        <div className="bg-card rounded-xl p-5 border border-border text-[0.95rem] text-muted-foreground text-center leading-relaxed">
+        <div className="bg-black/50 backdrop-blur-sm rounded-xl p-5 border border-white/20 text-[0.95rem] text-gray-200 text-center leading-relaxed">
           {t.lecturesFooter}
         </div>
       </div>
